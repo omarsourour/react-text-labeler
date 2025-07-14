@@ -6,8 +6,6 @@
 
 <!--- Please include a summary of the changes and which issue is fixed. List any dependencies that are required for this change. Include screenshots if a UI change. -->
 
-Resolves IAI-(issue)
-
 ## How was it tested?
 
 <!--- Please describe the tests that you ran to verify your changes, particularly noting any automated tests added. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration -->
