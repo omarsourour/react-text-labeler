@@ -28,6 +28,7 @@
     "dev": "vite",
     "eslint": "eslint . --ext .ts,.tsx",
     "postinstall": "husky",
+    "lint": "eslint",
     "pre-commit": "lint-staged",
     "prettier-lint": "prettier --check .",
     "preview": "vite preview",
