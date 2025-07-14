@@ -12,8 +12,6 @@ const config = {
   arrowParens: 'always',
   jsxSingleQuote: false,
   bracketSameLine: false,
-  xmlSelfClosingSpace: true,
-  xmlQuoteAttributes: 'single',
   plugins: ['prettier-plugin-packagejson', 'prettier-plugin-organize-imports'],
   overrides: [
     {
