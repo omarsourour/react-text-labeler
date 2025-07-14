@@ -1,0 +1,22 @@
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# Production
+/dist
+
+# misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Build tools
+.eslintcache
+.stylelintcache

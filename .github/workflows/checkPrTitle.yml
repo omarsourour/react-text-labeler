@@ -1,0 +1,12 @@
+name: 'Check PR title'
+on:
+  pull_request:
+    types: [edited, opened, synchronize, reopened]
+
+jobs:
+  title-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: naveenk1223/action-pr-title@v1.0.0
+        with:
+          regex: '(feat|fix|refactor|test|chore|ci|docs|proto|analytics):( \[RTL-[0-9]{3,}\])? .{10,}'

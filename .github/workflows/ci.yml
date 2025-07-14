@@ -1,0 +1,68 @@
+name: CI
+on: pull_request
+
+env:
+  HUSKY: 0
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_OPTIONS: --max-old-space-size=8192
+
+    steps:
+      # Checkout the repo source code from GitHub.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Install npm dependencies.
+      - name: Install dependencies
+        run: npm install
+
+      # Run eslint
+      - name: Run eslint
+        run: npm run lint
+
+      # Run stylelint
+      - name: Run stylelint
+        run: npm run stylelint
+
+      # Run prettier
+      - name: Run prettier
+        run: npm run prettier-lint
+
+  build_app:
+    name: Build App
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repo source code from GitHub.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Builds the app.
+      - name: Build the app
+        run: npm run build
+
+  test_app:
+    name: Test App
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repo source code from GitHub.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run tests
+      - name: Run tests
+        run: npm run test
